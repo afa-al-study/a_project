@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c14cdfbd-3dce-4dd2-8299-5dbd2a7b36a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_1149.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/BFS_maze.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/out/production/BFS_maze/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BFS_maze/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/dp_RGB.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/out/production/dp_RGB/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dp_RGB/src/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="c14cdfbd-3dce-4dd2-8299-5dbd2a7b36a4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +39,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1557530">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -141,12 +127,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="backjun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backjun" type="462c0819:PsiDirectoryNode" />
+              <item name="backjoon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backjoon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="backjun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backjun" type="462c0819:PsiDirectoryNode" />
+              <item name="backjoon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backjoon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -159,7 +145,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554696729122" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554697214055" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -174,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._2178">
+  <component name="RunManager" selected="Application._1149">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="_11726" />
       <module name="backjoon" />
@@ -206,8 +192,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._2178" />
         <item itemvalue="Application._1149" />
+        <item itemvalue="Application._2178" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -223,16 +209,17 @@
       <option name="presentableId" value="Default" />
       <updated>1554696332297</updated>
       <workItem from="1554696335492" duration="432000" />
+      <workItem from="1554696849139" duration="299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432000" />
+    <option name="totallyTimeSpent" value="731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
