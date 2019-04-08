@@ -1,13 +1,11 @@
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class _1697 {
-
+    final static boolean LOG_ENABLE = false;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); //술래
@@ -15,87 +13,123 @@ public class _1697 {
         int step = 0;
 
         Queue<Integer> queue = new LinkedList<Integer>();
-        boolean[] visit = new boolean[100000];
+        boolean[] visit = new boolean[100001];
         Arrays.fill(visit, false);
         visit[n] = true;
+        queue.offer(n);
 
 
-//        if(n == 0){
-//            n++;
-//            step++;
-//            visit[0] = true;
-//            queue.offer(n);
-//        }
-//        if( n == 1){
-//            n = 2;
-//            step++;
-//            queue.offer(n);
-//        }
+
+        int q_lv = 0;
 
         while(n != k){
 
             if(step == 0){
-                if((n+1) != k && (n-1) != k && (n*2) != k) {
-                    if((n+1) != k && !visit[n+1]) {
-                        //+1
+                n = queue.poll();
+                if(LOG_ENABLE){
+                    System.out.println("<n> = " + (n));
+                }
+
+                if((n+1) != k && (n-1) != k && (2*n) != k) {
+                    if ((n + 1) <= 100000 && !visit[n + 1]) {
                         queue.offer(n + 1);
                         visit[n + 1] = true;
-                    }
-                    if(n-1 >= 0) {
-                        //-1
-                        if ((n - 1) != k && !visit[n - 1]) {
-                            //+1
-                            queue.offer(n - 1);
-                            visit[n - 1] = true;
+                        if(LOG_ENABLE){
+                            System.out.println("n+1 = " + (n+1));
                         }
                     }
-                    if((2*n) != k && !visit[2*n]) {
-                        //+1
-                        queue.offer(n * 2);
-                        visit[n + 1] = true;
+
+                    if ((n - 1) >= 0 && !visit[n - 1]) {
+                        queue.offer(n - 1);
+                        visit[n - 1] = true;
+                        if(LOG_ENABLE){
+                            System.out.println("n-1 = " + (n-1));
+                        }
                     }
-                }else{
+
+                    if ((n * 2) <= 100000 && !visit[n * 2]) {
+                        queue.offer(n * 2);
+                        visit[n * 2] = true;
+                        if(LOG_ENABLE){
+                            System.out.println("n*2 = " + (n*2));
+                        }
+                    }
+
+                    q_lv = queue.size();
+                    step++;
+
+                }
+                else{
+                    step++;
                     n = k;
                 }
-                step++;
-
             }
             else {
-                step++;
+                for(int i = 0; i < q_lv; i++) {
+                    n = queue.poll();
+                    if(LOG_ENABLE){
+                        System.out.println("<n> = " + (n));
+                    }
 
-                for (int i = 0; i < Math.pow(3, step); i++) {
-                        n = queue.poll();
-                        if((n+1) != k && (n-1) != k && (n*2) != k) {
-                            if((n+1) != k && !visit[n+1]) {
-                                //+1
-                                queue.offer(n + 1);
-                                visit[n + 1] = true;
+                    if((n+1) != k && (n-1) != k && (2*n) != k) {
+                        if ((n + 1) <= 100000 && !visit[n + 1]) {
+                            queue.offer(n + 1);
+                            visit[n + 1] = true;
+                            if(LOG_ENABLE){
+                                System.out.println("n+1 = " + (n+1));
                             }
-
-                            //-1
-                            if((n-1) != k && !visit[n-1]) {
-                                //+1
-                                queue.offer(n - 1);
-                                visit[n - 1] = true;
-                            }
-                            if((2 * n) != k && !visit[2*n]) {
-                                //+1
-                                queue.offer(n * 2);
-                                visit[n + 1] = true;
-                            }
-                        }else{
-                            i = (int) Math.pow(3, step-1);
-                            n = k;
                         }
 
+                        if ((n - 1) >= 0 && !visit[n - 1]) {
+                            queue.offer(n - 1);
+                            visit[n - 1] = true;
+                            if(LOG_ENABLE){
+                                System.out.println("n-1 = " + (n-1));
+                            }
+                        }
+
+                        if ((n * 2) <= 100000 && !visit[n * 2]) {
+                            queue.offer(n * 2);
+                            visit[n * 2] = true;
+                            if(LOG_ENABLE){
+                                System.out.println("n*2 = " + (n*2));
+                            }
+                        }
+
+                        if(LOG_ENABLE){
+                            System.out.println("");
+                        }
+
+
                     }
+                    else {
+                        i = q_lv;
+                        n = k;
+                    }
+                }
+
+                    step++;
+                    q_lv = queue.size();
+
+            }
+
+            if(LOG_ENABLE){
+                System.out.println("step = " + step);
+                System.out.print("queue = {");
+                for(int i = 0; i < queue.size(); i ++) {
+                    System.out.print( ((LinkedList<Integer>) queue).get(i) + " ,");
+                }
+                System.out.print(" }");
+                System.out.println("");
+                System.out.println("");
+
 
             }
 
         }
 
+
         System.out.print(step);
     }
-
 
 }
