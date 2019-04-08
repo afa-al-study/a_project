@@ -1,7 +1,6 @@
+import java.util.Scanner;
 
-import java.util.*;
-
-public class Main{
+public class _1149 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -28,5 +27,4 @@ public class Main{
 
         System.out.println(Math.min(matrix[0][num], Math.min(matrix[1][num], matrix[2][num])));
     }
-
 }

@@ -1,6 +1,9 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
-public class Main {
+public class _2178 {
     public static int[][] matrix; //행렬
 
     public static void main(String[] args) {
@@ -52,14 +55,14 @@ public class Main {
                 int x_ = dx[i] + x;
                 int y_ = dy[i] + y;
 
-               if(x_ != 0 && y_ != 0 && x_<= n && y_ <= m) {
-                   if (matrix[x_][y_] == 1 && !visited[x_][y_]) {
-                       qx.add(x_);
-                       qy.add(y_);
-                       visited[x_][y_] = true;
-                       matrix[x_][y_] = matrix[x][y] + 1;
-                   }
-               }
+                if(x_ != 0 && y_ != 0 && x_<= n && y_ <= m) {
+                    if (matrix[x_][y_] == 1 && !visited[x_][y_]) {
+                        qx.add(x_);
+                        qy.add(y_);
+                        visited[x_][y_] = true;
+                        matrix[x_][y_] = matrix[x][y] + 1;
+                    }
+                }
             }
         }
 
