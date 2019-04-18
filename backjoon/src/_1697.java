@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+import static com.sun.webkit.perf.WCFontPerfLogger.log;
+
 public class _1697 {
     final static boolean LOG_ENABLE = false;
     public static void main(String[] args) {
@@ -17,10 +19,9 @@ public class _1697 {
         Arrays.fill(visit, false);
         visit[n] = true;
         queue.offer(n);
-
-
-
         int q_lv = 0;
+
+
 
         while(n != k){
 
@@ -65,6 +66,7 @@ public class _1697 {
                 }
             }
             else {
+
                 for(int i = 0; i < q_lv; i++) {
                     n = queue.poll();
                     if(LOG_ENABLE){
@@ -100,7 +102,6 @@ public class _1697 {
                             System.out.println("");
                         }
 
-
                     }
                     else {
                         i = q_lv;
@@ -127,6 +128,8 @@ public class _1697 {
             }
 
         }
+
+        //또는 미로찾기1 방법 처럼 visit할 때 +1을 해주는 방법이 있음.
 
 
         System.out.print(step);
