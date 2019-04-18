@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c14cdfbd-3dce-4dd2-8299-5dbd2a7b36a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_12100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_9095.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_2579.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backjoon/_1149.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backjoon/_1149.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backjoon/_11726.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backjoon/_11726.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backjoon/_2178.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backjoon/_2178.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1697.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1697.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,23 +55,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8562" />
+          <entry key="java" value="10513" />
           <entry key="txt" value="232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8562" />
+          <entry key="JAVA" value="10513" />
           <entry key="PLAIN_TEXT" value="232" />
         </counts>
       </usages-collector>
@@ -112,11 +106,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_9095.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="114">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_2579.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,6 +181,7 @@
         <option value="$PROJECT_DIR$/src/_1697.java" />
         <option value="$PROJECT_DIR$/src/_12100.java" />
         <option value="$PROJECT_DIR$/src/_9095.java" />
+        <option value="$PROJECT_DIR$/src/_2579.java" />
       </list>
     </option>
   </component>
@@ -184,7 +191,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="978" />
@@ -231,7 +238,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ceoah/Desktop/backjunAlgorithm/backjoon/src/_1149.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555573373759" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555582895862" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -246,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._9095">
+  <component name="RunManager" selected="Application._2579">
     <configuration name="_12100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_12100" />
       <module name="backjoon" />
@@ -261,8 +268,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_1697_answer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_1697_answer" />
+    <configuration name="_2579" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_2579" />
       <module name="backjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -283,18 +290,18 @@
     </configuration>
     <list>
       <item itemvalue="Application._1697" />
-      <item itemvalue="Application._1697_answer" />
       <item itemvalue="Application._12100" />
       <item itemvalue="Application._9095" />
       <item itemvalue="Application._9095 (1)" />
+      <item itemvalue="Application._2579" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._2579" />
         <item itemvalue="Application._9095" />
         <item itemvalue="Application._9095 (1)" />
         <item itemvalue="Application._12100" />
         <item itemvalue="Application._1697" />
-        <item itemvalue="Application._1697_answer" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +317,7 @@
       <updated>1554696332297</updated>
       <workItem from="1554696335492" duration="432000" />
       <workItem from="1554696849139" duration="29148000" />
-      <workItem from="1555560892133" duration="8946000" />
+      <workItem from="1555560892133" duration="15109000" />
     </task>
     <task id="LOCAL-00001" summary="visit이 없었을 시&#10;0부터 시작하지 않으면 맞음&#10;visit으로 인해 한 숫자당 꼭 3의 제곱으로 나오지 않을 수가 있음.&#10;이 부분 다시 생각해야함">
       <created>1554720977998</created>
@@ -330,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38526000" />
+    <option name="totallyTimeSpent" value="44689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,8 +361,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40851063" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4680851" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40851063" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4680851" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -479,16 +486,55 @@
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_2579.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="total_num[n]" language="JAVA" />
+        <watch expression="dp[i-3]+arys[i-1]+arys[i]" language="JAVA" />
+        <watch expression="arys[i]+dp[i-2]" language="JAVA" />
+        <watch expression="dp[i]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>dp[i-3]+arys[i-1]+arys[i]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dp[i]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dp[int]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arys[i]+dp[i-2]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dp[i-3]+dp[i-1]+arys[i]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dp[0]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>total_num[n]</expression-string>
         <language-id>JAVA</language-id>
@@ -506,36 +552,6 @@
       </expression>
       <expression>
         <expression-string>sp</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>queue</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Math.pow(3, step-1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Math.pow(3,step)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>k-((k-1)/2)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>k-((k+1)/2)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(k-1)/2</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -586,8 +602,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_9095.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="114">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_2579.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
