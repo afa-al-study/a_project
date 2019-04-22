@@ -46,7 +46,7 @@ public class _1012 {
                                 int x_ = x + dx[v];
                                 int y_ = y + dy[v];
 
-                                if(!(x_ < 0 || y_ < 0 || x_ > height-1 || y_ > width-1)){
+                                if(!(x_ < 0 || y_ < 0 || x_ > row-1 || y_ > col-1)){
                                     if(state[x_][y_] == 1){
                                         qx.offer(x_);
                                         qy.offer(y_);
