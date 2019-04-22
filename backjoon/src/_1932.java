@@ -13,23 +13,12 @@ public class _1932 {
         }
         int[] array = new int[total];
         int[] dp = new int[total];
-//        int[] first = new int[n];
-//        int[] last = new int[n];
+
         ArrayList<Integer> first = new ArrayList<>();
         ArrayList<Integer> last = new ArrayList<>();
         int k = 0; //번지수
         int l = 0; // +1, +2, +3 ...
 
-
-//        for(int i = 0; i < total; i++){
-//            array[i] = sc.nextInt();
-//            if(i == k){
-//                first[l] = i; //lv의 첫번째가 몇번째인지
-//                last[l] = i+l;
-//                l++;
-//                k = k + l;
-//            }
-//        }
 
         for(int i = 0; i < total; i++){
             array[i] = sc.nextInt();
@@ -42,20 +31,18 @@ public class _1932 {
         }
 
         dp[0] = array[0];
-        for(int i = 1; i < total; i++){ //lv1부터(루트 다음부터)
+        int lv = 1;
+        for(int i = 1; i < total; i++){
             if(first.contains(i)){
-                dp[i] = dp[first.get(first.indexOf(i)-1)] + array[i];
+                dp[i] = dp[i-lv] + array[i];
             }else if(last.contains(i)){
-                dp[i] = dp[last.get(last.indexOf(i)-1)] + array[i];
+                dp[i] = dp[i-(lv+1)] + array[i];
+                lv++;
             }else{
-                int lv = i;
-                while(!first.contains(lv)){
-                    lv--;
-                }
-                lv = first.indexOf(lv);
-                dp[i] = Math.max(dp[i-(lv+1)]+array[i], dp[i-(lv)] + array[i]) ;
+                dp[i] = Math.max(dp[i-lv] + array[i], dp[i-lv-1] + array[i]);
             }
         }
+
 
         int max = 0;
         int tmp = 0;
@@ -70,3 +57,19 @@ public class _1932 {
 
     }
 }
+
+//시간 초과
+//        for(int i = 1; i < total; i++){ //lv1부터(루트 다음부터)
+//            if(first.contains(i)){
+//                dp[i] = dp[first.get(first.indexOf(i)-1)] + array[i];
+//            }else if(last.contains(i)){
+//                dp[i] = dp[last.get(last.indexOf(i)-1)] + array[i];
+//            }else{
+//                int lv = i;
+//                while(!first.contains(lv)){
+//                    lv--;
+//                }
+//                lv = first.indexOf(lv);
+//                dp[i] = Math.max(dp[i-(lv+1)]+array[i], dp[i-(lv)] + array[i]) ;
+//            }
+//        }
