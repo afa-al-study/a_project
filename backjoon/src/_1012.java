@@ -18,28 +18,38 @@ public class _1012 {
             int row = sc.nextInt();  //세로
             int cab_num = sc.nextInt(); //배추 개수
             int[][] state = new int[row][col]; //0으로 초기화
+            int[][] visit = new int[row][col];
+
+            Queue<Integer> qx = new LinkedList<>();
+            Queue<Integer> qy = new LinkedList<>();
+            int times = 0;
 
             for(int j = 0; j < cab_num; j++){
                 int k = sc.nextInt();
                 int l = sc.nextInt();
 
                 state[l][k] = 1;
+                qx.offer(l);
+                qy.offer(k);
             }
 
-            Queue<Integer> qx = new LinkedList<>();
-            Queue<Integer> qy = new LinkedList<>();
-            int times = 0;
+            //qx,qy에는 1인 좌표가 들어있음
 
-            for(int j = 0; j < row; j++){
-                for(int k = 0; k < col; k++){
-                    if(state[j][k] == 1){
+            Queue<Integer> qx_ = new LinkedList<>();
+            Queue<Integer> qy_ = new LinkedList<>();
+
+            while(!qx.isEmpty() && !qy.isEmpty()){
+                    int k = qx.poll();
+                    int l = qy.poll();
+
+                    if(state[k][l] != 0) {
                         times++;
-                        qx.offer(j);
-                        qy.offer(k);
 
-                        while(!qx.isEmpty() && !qy.isEmpty()){
-                            int x = qx.poll();
-                            int y = qy.poll();
+                        qx_.offer(k);
+                        qy_.offer(l);
+                        while(!qx_.isEmpty() && !qy_.isEmpty()){
+                            int x = qx_.poll();
+                            int y = qy_.poll();
                             state[x][y] = 0;
 
                             for(int v = 0; v < dx.length; v++) {
@@ -48,8 +58,8 @@ public class _1012 {
 
                                 if(!(x_ < 0 || y_ < 0 || x_ > row-1 || y_ > col-1)){
                                     if(state[x_][y_] == 1){
-                                        qx.offer(x_);
-                                        qy.offer(y_);
+                                        qx_.offer(x_);
+                                        qy_.offer(y_);
                                     }
 
                                 }
@@ -57,13 +67,11 @@ public class _1012 {
 
 
                         }
-
                     }
-                }
+
             }
 
             result.add(times);
-
 
         }
 
@@ -72,6 +80,37 @@ public class _1012 {
         }
 
     }
-
-
 }
+
+//시간초과
+//            for(int j = 0; j < row; j++){
+//                for(int k = 0; k < col; k++){
+//                    if(state[j][k] == 1){
+//                        times++;
+//                        qx.offer(j);
+//                        qy.offer(k);
+//
+//                        while(!qx.isEmpty() && !qy.isEmpty()){
+//                            int x = qx.poll();
+//                            int y = qy.poll();
+//                            state[x][y] = 0;
+//
+//                            for(int v = 0; v < dx.length; v++) {
+//                                int x_ = x + dx[v];
+//                                int y_ = y + dy[v];
+//
+//                                if(!(x_ < 0 || y_ < 0 || x_ > row-1 || y_ > col-1)){
+//                                    if(state[x_][y_] == 1){
+//                                        qx.offer(x_);
+//                                        qy.offer(y_);
+//                                    }
+//
+//                                }
+//                            }
+//
+//
+//                        }
+//
+//                    }
+//                }
+//            }
