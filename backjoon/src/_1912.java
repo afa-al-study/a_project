@@ -9,32 +9,18 @@ public class _1912 {
         int[] dp = new int[num];
 
         int max = 0;
-        int tmp = 0;
 
         for(int i = 0; i< num; i++){
             array[i] = sc.nextInt();
         }
 
+
+        dp[0] = array[0];
         max = array[0];
-        for(int i = 0; i < num; i++){
-            if(array[i] >= 0){ //양수
-                    tmp += array[i];
-            }else{//현재 값이 음수 일때,
-                if(tmp != 0 ){
-                    if (max < tmp) {
-                        max = tmp;
-                        tmp = 0;
-                    }
-                }else if(max < array[i]){
-                    max = array[i];
-                }
+         for(int i = 1; i < num; i++){
+            dp[i] = Math.max(dp[i-1] + array[i], array[i]);
 
-            }
-
-        }
-
-        if(tmp != 0 && max < tmp){
-            max = tmp;
+            max = Math.max(dp[i], max);
         }
 
         System.out.print(max);
