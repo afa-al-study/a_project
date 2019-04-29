@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c14cdfbd-3dce-4dd2-8299-5dbd2a7b36a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/_1012.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1012.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_2156.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,23 +59,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="20788" />
+          <entry key="java" value="21975" />
           <entry key="txt" value="232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20788" />
+          <entry key="JAVA" value="21975" />
           <entry key="PLAIN_TEXT" value="232" />
         </counts>
       </usages-collector>
@@ -103,14 +104,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_1012.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+            <state relative-caret-position="141">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_2156.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -161,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/_2193.java" />
         <option value="$PROJECT_DIR$/src/_1932.java" />
         <option value="$PROJECT_DIR$/src/_1012.java" />
+        <option value="$PROJECT_DIR$/src/_2156.java" />
       </list>
     </option>
   </component>
@@ -217,7 +228,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ceoah/Desktop/backjunAlgorithm/backjoon/src/_1149.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556098673042" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556518518343" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -232,7 +243,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._1012">
+  <component name="RunManager" selected="Application._2156">
     <configuration name="_1012" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_1012" />
       <module name="backjoon" />
@@ -242,6 +253,13 @@
     </configuration>
     <configuration name="_1932" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_1932" />
+      <module name="backjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_2156" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_2156" />
       <module name="backjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -268,28 +286,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="backjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application._7576" />
       <item itemvalue="Application._2667" />
-      <item itemvalue="Application.test" />
       <item itemvalue="Application._2193" />
       <item itemvalue="Application._1932" />
       <item itemvalue="Application._1012" />
+      <item itemvalue="Application._2156" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._2156" />
         <item itemvalue="Application._1012" />
         <item itemvalue="Application._1932" />
         <item itemvalue="Application._2193" />
         <item itemvalue="Application._2667" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78647000" />
+    <option name="totallyTimeSpent" value="85446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,8 +361,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3248227" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.31631204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3248227" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5148936" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -548,16 +559,29 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="dp[0]" language="JAVA" />
-        <watch expression="dp[1]" language="JAVA" />
-        <watch expression="dp[2]" language="JAVA" />
-        <watch expression="dp[3]" language="JAVA" />
-        <watch expression="dp[4]" language="JAVA" />
+        <watch expression="array[i] + array[i-1] + dp[i-3]" language="JAVA" />
+        <watch expression="dp[i-2] + array[i]" language="JAVA" />
+        <watch expression="max" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>max</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dp[i-2] + array[i]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>array[i] + array[i-1] + dp[i-3]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>y</expression-string>
         <language-id>JAVA</language-id>
@@ -590,21 +614,6 @@
       </expression>
       <expression>
         <expression-string>qx</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>last.get(n-1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>first.get(n-1)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>last</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -716,11 +725,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_1012.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+        <state relative-caret-position="141">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_2156.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
