@@ -8,13 +8,13 @@ public class _10844 {
        int n = sc.nextInt();
        int[][] dp = new int[n+1][11]; // 0~10
 
-        for(int i = 0; i <= 10; i++){
+        for(int i = 0; i <= 10; i++){ //1의 자리일 때, 개수
             dp[1][i] = 1;
         }
         dp[1][10] = 0;
 
-        for(int i = 2; i <= n; i++){
-            for(int j = 0; j <= 9; j++){
+        for(int i = 2; i <= n; i++){ //2~n의 자리 숫자
+            for(int j = 0; j <= 9; j++){ //0~9로 시작하는 숫자
                 if(j == 0){
                     dp[i][j] = dp[i-1][j+1] % 1000000000;
                 }else if(j == 9){
