@@ -1,7 +1,6 @@
 import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class _17140 { //이차원 배열과 연산
 
@@ -31,49 +30,82 @@ public class _17140 { //이차원 배열과 연산
                 for(int i = 1; i <= row; i++) {//행 개수만큼 돌리면서
                     int n = 1;
                     int[] n_cnt = new int[101];
-                    ArrayList<Integer[]> n_sort = new ArrayList<>();
+//                    ArrayList<Integer[]> n_sort = new ArrayList<>();
+                    int[][] n_sort = new int[101][101];
 
                     while (state[i][n] != 0) {//열 끝까지 돌리기
                         n_cnt[state[i][n]] += 1; //해당 숫자 개수 올리기
+                        state[i][n] = 0;
+
                         n++;
                     }
 
-                    //l대신 queue같은걸 이용해서 99개까지안도는 방법 찾아보기
-
+                    ArrayList<Integer> counts = new ArrayList<>();
                     for(int l = 1; l <= 99; l++){
-                        if(n_cnt[l] > 0){ // 숫자 개수가 1개 이상일 때
-                            if(n_sort.isEmpty()) { // 처음 add할 때
-                                n_sort.add(new Integer[]{l, n_cnt[l]}); //숫자와 개수
-                            }else{
-                                for(int m = 0; m < n_sort.size(); m++){
-                                    if(n_sort.get(m)[1] > n_cnt[l]){ //현재 갯수가 add된 갯수보다 작으면
-                                        n_sort.add(m, new Integer[]{l, n_cnt[l]});
-                                        break;
-                                    }
-                                    else if(n_sort.get(m)[1] == n_cnt[1]){ //개수가 같을 때
-                                        if(n_sort.get(m)[0] > l){ // 숫자가 작으면 앞에 추가
-                                            n_sort.add(m, new Integer[]{l, n_cnt[l]});
-                                        }
-                                    }
-                                    else{
-                                        n_sort.add(new Integer[]{l, n_cnt[l]}); //마지막에 플러스
-
-                                    }
-                                }
+                        if(n_cnt[l] > 0){ //숫자 갯수가 1 이상일 때
+                            int count = n_cnt[l];
+                            n_sort[l][count] = 1; // 'l'숫자가 count만큼 있다
+                            if(!counts.contains(count)) {
+                                counts.add(count);
                             }
                         }
                     }
 
-                    int q = 1;
-                    for(int l = 1; l <= n_sort.size(); l++){
-                        if(q == 100){
-                            break;
-                        }else {
-                            state[i][q] = n_sort.get(l - 1)[0];
-                            state[i][q + 1] = n_sort.get(l - 1)[1];
-                            q = q+2;
-                        }
+                    Collections.sort(counts);
+
+                    if(row < counts.size()*2) {
+                        row = counts.size() * 2;
                     }
+
+                    int q = 1;
+                     while(!counts.isEmpty()){
+                        for(int j = 1; j <= 99; j++){
+                            int g = counts.get(0); // 횟수
+                            if(n_sort[j][g] == 1 && q <= 100){ //j는 숫자 열은 횟수
+                                state[i][q] = j;
+                                state[i][q+1] = g;
+                                q = q+2;
+                            }
+                        }
+                        counts.remove(0);
+                    }
+
+                    //l대신 queue같은걸 이용해서 99개까지안도는 방법 찾아보기
+
+//                    for(int l = 1; l <= 99; l++){
+//                        if(n_cnt[l] > 0){ // 숫자 개수가 1개 이상일 때
+//                            if(n_sort.isEmpty()) { // 처음 add할 때
+//                                n_sort.add(new Integer[]{l, n_cnt[l]}); //숫자와 개수
+//                            }else{
+//                                for(int m = 0; m < n_sort.size(); m++){
+//                                    if(n_sort.get(m)[1] > n_cnt[l]){ //현재 갯수가 add된 갯수보다 작으면
+//                                        n_sort.add(m, new Integer[]{l, n_cnt[l]});
+//                                        break;
+//                                    }
+//                                    else if(n_sort.get(m)[1] == n_cnt[1]){ //개수가 같을 때
+//                                        if(n_sort.get(m)[0] > l){ // 숫자가 작으면 앞에 추가
+//                                            n_sort.add(m, new Integer[]{l, n_cnt[l]});
+//                                        }
+//                                    }
+//                                    else{
+//                                        n_sort.add(new Integer[]{l, n_cnt[l]}); //마지막에 플러스
+//
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    int q = 1;
+//                    for(int l = 1; l <= n_sort.size(); l++){
+//                        if(q == 100){
+//                            break;
+//                        }else {
+//                            state[i][q] = n_sort.get(l - 1)[0];
+//                            state[i][q + 1] = n_sort.get(l - 1)[1];
+//                            q = q+2;
+//                        }
+//                    }
 
                 }
             }
