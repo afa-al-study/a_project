@@ -10,6 +10,13 @@ public class test {
         }
     }
 
+    //일차행렬 프린트 함수
+    public void printMatrix2(int x_num, int[] state){
+        for(int i = 0; i < x_num; i++){
+            System.out.print(state[i] + " ");
+        }
+    }
+
     public static void main(String args[]){
 
 
