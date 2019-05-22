@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//생각한 것, matrix에 넣지말고 for문 돌때 마다 matrix새로 생성해서 하는것도 나쁘지 않을듯
 public class _17143 { //낚시왕 문제
 
     public static void main(String args[]){
@@ -55,33 +56,62 @@ public class _17143 { //낚시왕 문제
                 int s = shark.getSpeed();
                 int d = shark.getDir();
                 int z = shark.getZ();
-                if(shark.getDir()==1){ //위
+                if(shark.getDir()==1){ //위 //1,2는 row만 변경
 
                 }
                 if(shark.getDir()==2){ //아래
 
                 }
-                if(shark.getDir() == 3){ //오른쪽
+                if(shark.getDir() == 3){ //오른쪽 //3,4는 column만 변경
+                    c = shark.getCol() + shark.getSpeed();
+                    if(c > C){
+                        if(shark.getSpeed()-(C-shark.getCol()) > C-1){
+
+                                //짝수였을 때
+                            if((shark.getSpeed()-(C-shark.getCol()))/(C-1)%2 == 0){//반대
+                                c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
+
+                                shark.setDir(4);
+                            }else{  //홀수였을 때
+                                c = C - ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
+
+                                shark.setDir(3);
+                            }
+
+                        }else{
+                            c = C -(shark.getSpeed()-(C-shark.getCol()));
+                            shark.setDir(4);
+                        }
+                    }
 
                 }
                 if(shark.getDir() == 4) { //왼쪽
 //                    r = shark.getSpeed() - shark.getRow();
-                    r = shark.getRow() - shark.getSpeed();
-                    if(r <= 0){
-                        if(shark.getSpeed()-(shark.getRow()-1) > (C-1)){ //Speed-Row-1한 것이 column-1보다 클 때
-                            r = 1 + (shark.getSpeed() - (shark.getRow()-1)%(C+1));
-                            if(((shark.getRow()-1)%(C+1))%2 == 0){ //짝수면 반대 방향
+                    c = shark.getCol() - shark.getSpeed();
+                    if(c <= 0){
+                        if(shark.getSpeed()-(shark.getCol()-1) > (C-1)){ //Speed-Row-1한 것이 column-1보다 클 때
+
+                            if((((shark.getSpeed()-(shark.getCol()-1))/(C-1))%2) == 0){ //짝수면 반대 방향
+                                c = 1 + ((shark.getSpeed() - (shark.getCol()-1))%(C-1));
                                 shark.setDir(3);
                             }else{
+                                c = C- ((shark.getSpeed() - (shark.getCol()-1))%(C-1));
                                 shark.setDir(4);
                             }
+//                            c = 1 + ((shark.getSpeed() - (shark.getCol()-1))%(C+1));
+//
+//                            if((((shark.getSpeed()-(shark.getCol()-1))/(C+1))%2) == 0){ //짝수면 반대 방향
+//                                shark.setDir(3);
+//                            }else{
+//                                shark.setDir(4);
+//                            }
                         }
                         else {
-                            r = 1 + (shark.getSpeed() - (shark.getRow()-1));
+                            c = 1 + (shark.getSpeed() - (shark.getCol()-1));
                             shark.setDir(3); //한번만 방향전환 했기 때문에
                         }
                     }
-                    shark.setRow(r); // 1+ 나머지
+                    shark.setCol(c); //column 바꾸기
 
                 }
                 //새로운 matrix에 상어 준비 tmp로 만들어야 하나 그것은 모르게따
