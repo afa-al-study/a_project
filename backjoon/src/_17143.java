@@ -10,7 +10,9 @@ public class _17143 { //낚시왕 문제
         int shark_num = sc.nextInt(); //상어 수
 //        int[][][][][] s_info = new int[R+1][C+1][1000][5][10001]; //1부터 시작하는건 +1
 //        ArrayList<Integer[]> s_info = new ArrayList<>();
-        Shark[][] matrix = new Shark[R+2][C+2]; //0으로 벽세워줌
+        Shark[][] matrix = new Shark[R+2][C+2]; //0으로 벽세워줌 //수조 1~R+1, 1~C+1까지
+        Shark[][] matrix2 = new Shark[R+2][C+2]; //0으로 벽세워줌 //수조 1~R+1, 1~C+1까지
+
         ArrayList<Shark> sharkList = new ArrayList<>();
 
         for(int i = 0; i < shark_num; i++){ //shark 넣어주기
@@ -21,52 +23,125 @@ public class _17143 { //낚시왕 문제
             int z = sc.nextInt(); //크기
 
             Shark shark = new Shark();
-            shark.setShark(s, d, z);
+            shark.setShark(r, c, s, d, z);
             matrix[r][c] = shark;
+            sharkList.add(shark);
         }
+        int cnt = 0; //상어 크기 합
+
+        //낚시
+        //사람이
+        for(int i = 1; i <= R; i++){
+            //R+1이거나 0일때는 벽
+            //C+1이거나 0일때는 벽
+            //i와 가까운 상어 포획
+            for(int j = 1; j <= R; j++){ //땅과 가까운 상어 포획
+                if(matrix[j][i].getRow() != 0){
+                    cnt += matrix[j][i].getZ();
+                    sharkList.remove(matrix[j][i]); //list에서 상어삭제
+                    matrix[j][i].setShark(0, 0, 0,0,0); //삭제
+
+                }
+            }
+            //상어 이동
+
+            for(int j = 0; j < sharkList.size(); j++){
+                Shark shark;
+                shark = sharkList.get(0);
+                //dir가 위, 아래 인지
+                //좌우,  col -, +
+                int r = shark.getRow();
+                int c = shark.getCol();
+                int s = shark.getSpeed();
+                int d = shark.getDir();
+                int z = shark.getZ();
+                if(shark.getDir()==1){ //위
+
+                }
+                if(shark.getDir()==2){ //아래
+
+                }
+                if(shark.getDir() == 3){ //오른쪽
+
+                }
+                if(shark.getDir() == 4) { //왼쪽
+//                    r = shark.getSpeed() - shark.getRow();
+                    r = shark.getRow() - shark.getSpeed();
+                    if(r <= 0){
+                        if(shark.getSpeed()-(shark.getRow()-1) > (C-1)){ //Speed-Row-1한 것이 column-1보다 클 때
+                            r = 1 + (shark.getSpeed() - (shark.getRow()-1)%(C+1));
+                            if(((shark.getRow()-1)%(C+1))%2 == 0){ //짝수면 반대 방향
+                                shark.setDir(3);
+                            }else{
+                                shark.setDir(4);
+                            }
+                        }
+                        else {
+                            r = 1 + (shark.getSpeed() - (shark.getRow()-1));
+                            shark.setDir(3); //한번만 방향전환 했기 때문에
+                        }
+                    }
+                    shark.setRow(r); // 1+ 나머지
+
+                }
+                //새로운 matrix에 상어 준비 tmp로 만들어야 하나 그것은 모르게따
+                matrix2[shark.getRow()][shark.getCol()] = shark;
+
+            }
+
+            //움직였는데 이미 상어가 있다? Z비교 후 큰걸로 대체
+
+        }
+
     }
 
+
+
+
     public static class Shark{
-//        int row;
-//        int col;
+        int r;
+        int c;
         int s;
         int d;
         int z;
 
-        public void setShark(int s, int d, int z){
+        public void setShark(int r, int c, int s, int d, int z){
+            this.r = r;
+            this.c = c;
             this.s = s;
             this.d = d;
             this.z = z;
         }
 
-//        public void setRow(int r){
-//            this.row = r;
-//        }
-//        public int returnRow(){
-//            return row;
-//        }
-//        public void setCol(int c){
-//            this.col = c;
-//        }
-//        public int returnCol(){
-//            return col;
-//        }
-//        public void setSpeed(int s){
-//            this.speed = s;
-//        }
-        public int returnSpeed(){
+
+        public void setRow(int r){
+            this.r = r;
+        }
+        public int getRow(){
+            return r;
+        }
+        public void setCol(int c){
+            this.c = c;
+        }
+        public int getCol(){
+            return c;
+        }
+        public void setSpeed(int s){
+            this.s = s;
+        }
+        public int getSpeed(){
             return s;
         }
-//        public void setDir(int d){
-//            this.d = d;
-//        }
-        public int returnDir(){
+        public void setDir(int d){
+            this.d = d;
+        }
+        public int getDir(){
             return d;
         }
-//        public void setZ(int z){
-//            this.z = z;
-//        }
-        public int returnZ(){
+        public void setZ(int z){
+            this.z = z;
+        }
+        public int getZ(){
             return z;
         }
     }
