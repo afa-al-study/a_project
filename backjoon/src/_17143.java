@@ -130,19 +130,16 @@ public class _17143 { //낚시왕 문제
 
                     c = shark.getCol() + shark.getSpeed();
                     if(c > C){
+                        //shark.getSpeed()-(C-shark.getCol()) : 현재부터 C까지 갈 횟수
+                        //C-1은 최대 갈수 있는 횟수
                         if(shark.getSpeed()-(C-shark.getCol()) > C-1){
-
-                                //짝수였을 때
+                            //짝수였을 때
                             if(((shark.getSpeed()-(C-shark.getCol()))/(C-1))%2 == 0){//반대
                                 c = C - ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
                                 shark.setDir(4);
-
-
                             }else{  //홀수였을 때
                                 c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
-
                                 shark.setDir(3);
-
                             }
                         }else{
                             c = C -(shark.getSpeed()-(C-shark.getCol()));
@@ -156,6 +153,7 @@ public class _17143 { //낚시왕 문제
 
                     c = shark.getCol() - shark.getSpeed();
                     if(c <= 0){
+                        //shark.getSpeed()-(shark.getCol()-1) = 1 부터 가야할 횟수
                         if(shark.getSpeed()-(shark.getCol()-1) > (C-1)){ //Speed-Column-1한 것이 column-1보다 클 때
 
                             if((((shark.getSpeed()-(shark.getCol()-1))/(C-1))%2) == 0){ //짝수면 반대 방향
