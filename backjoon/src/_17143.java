@@ -33,7 +33,7 @@ public class _17143 { //낚시왕 문제
 
         //낚시
         //사람이 움직일 때 i+1
-        for(int i = 1; i <= R; i++){
+        for(int i = 1; i <=C; i++){
             //R+1이거나 0일때는 벽
             //C+1이거나 0일때는 벽
             //i와 가까운 상어 포획
@@ -82,22 +82,53 @@ public class _17143 { //낚시왕 문제
                     shark.setDir(2);
                 }
                 if(shark.getRow() == R && shark.getDir() == 2){
-                    shark.setDir(2);
+                    shark.setDir(1);
                 }
 
                 if(shark.getDir()==1){ //위 //1,2는 row만 변경
+                    r = shark.getRow() - shark.getSpeed();
+                    if(r <= 0){
+                        if(shark.getSpeed()-(shark.getRow()-1) > (R-1)){ //Speed-Row-1한 것이 row-1보다 클 때
 
-
-                }
-                if(shark.getDir()==2){ //아래
-
-                }
-                if(shark.getDir() == 3){ //오른쪽 //3,4는 column만 변경
-
-                    if(shark.getCol() == C){
-                        shark.setDir(4);
-                        break;
+                            if((((shark.getSpeed()-(shark.getRow()-1))/(R-1))%2) == 0){ //짝수면 반대 방향
+                                r = 1 + ((shark.getSpeed() - (shark.getRow()-1))%(R-1));
+                                shark.setDir(2);
+                            }else{
+                                r = R - ((shark.getSpeed() - (shark.getRow()-1))%(R-1));
+                                shark.setDir(1);
+                            }
+                        }
+                        else {
+                            r = 1 + (shark.getSpeed() - (shark.getRow()-1));
+                            shark.setDir(2); //한번만 방향전환 했기 때문에
+                        }
                     }
+                    shark.setRow(r); //row 바꾸기
+                }
+                else if(shark.getDir()==2){ //아래
+                    r = shark.getRow() + shark.getSpeed();
+                    if(r > R){
+                        if(shark.getSpeed()-(R-shark.getRow()) > R-1){
+
+                            //짝수였을 때
+                            if(((shark.getSpeed()-(R-shark.getRow()))/(R-1))%2 == 0){//반대
+                                r = R - ((shark.getSpeed()-(R-shark.getRow()))%(R-1));
+                                shark.setDir(1);
+
+                            }else{  //홀수였을 때
+                                r = 1+ ((shark.getSpeed()-(R-shark.getRow()))%(R-1));
+                                shark.setDir(2);
+
+                            }
+                        }else{
+                            r = R -(shark.getSpeed()-(R-shark.getRow()));
+                            shark.setDir(1);
+                        }
+                    }
+                    shark.setRow(r);
+                }
+                else if(shark.getDir() == 3){ //오른쪽 //3,4는 column만 변경
+
                     c = shark.getCol() + shark.getSpeed();
                     if(c > C){
                         if(shark.getSpeed()-(C-shark.getCol()) > C-1){
@@ -107,8 +138,7 @@ public class _17143 { //낚시왕 문제
 //                                c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
                                 c = C - ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
 //                                shark.setDir(4);
-                                shark.setDir(3);
-
+                                shark.setDir(4);
 
 
                             }else{  //홀수였을 때
@@ -116,7 +146,7 @@ public class _17143 { //낚시왕 문제
                                 c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
 
 //                                shark.setDir(3);
-                                shark.setDir(4);
+                                shark.setDir(3);
 
                             }
                         }else{
@@ -127,14 +157,11 @@ public class _17143 { //낚시왕 문제
                     shark.setCol(c);
 
                 }
-                if(shark.getDir() == 4) { //왼쪽
-                    if(shark.getCol() == 1){
-                        shark.setDir(3);
-                        break;
-                    }
+                else if(shark.getDir() == 4) { //왼쪽
+
                     c = shark.getCol() - shark.getSpeed();
                     if(c <= 0){
-                        if(shark.getSpeed()-(shark.getCol()-1) > (C-1)){ //Speed-Row-1한 것이 column-1보다 클 때
+                        if(shark.getSpeed()-(shark.getCol()-1) > (C-1)){ //Speed-Column-1한 것이 column-1보다 클 때
 
                             if((((shark.getSpeed()-(shark.getCol()-1))/(C-1))%2) == 0){ //짝수면 반대 방향
                                 c = 1 + ((shark.getSpeed() - (shark.getCol()-1))%(C-1));
@@ -169,6 +196,8 @@ public class _17143 { //낚시왕 문제
                     }else{ //있는 상어가 더 클 때
                         sharkList.remove(shark);
                     }
+                    j = j -1;
+
                 }
                 else{
                     matrix2[r][c] = shark; //변경
