@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//생각한 것, matrix에 넣지말고 for문 돌때 마다 matrix새로 생성해서 하는것도 나쁘지 않을듯
 public class _17143 { //낚시왕 문제
 
     public static void main(String args[]){
-        _17143 func = new _17143();
+//        _17143 func = new _17143();
 
         Scanner sc = new Scanner(System.in);
         int R = sc.nextInt(); //행
@@ -40,13 +39,13 @@ public class _17143 { //낚시왕 문제
 
             Shark[][] matrix2 = new Shark[R+2][C+2]; //0으로 벽세워줌 //수조 1~R+1, 1~C+1까지
 
-            System.out.println("");
-            System.out.println(i + "번째 잡기 전");
-            func.printMatrix(R+2, C+2, matrix);
+//            System.out.println("");
+//            System.out.println(i + "번째 잡기 전");
+//            func.printMatrix(R+2, C+2, matrix);
 
             for(int j = 1; j <= R; j++){ //땅과 가까운 상어 포획
                 if(matrix[j][i] != null){
-                    System.out.println(i + "번째 잡은 상어 크기 = " + matrix[j][i].getZ());
+//                    System.out.println(i + "번째 잡은 상어 크기 = " + matrix[j][i].getZ());
 
                     cnt += matrix[j][i].getZ();
                     sharkList.remove(matrix[j][i]); //list에서 상어삭제
@@ -55,9 +54,9 @@ public class _17143 { //낚시왕 문제
                 }
             }
 
-            System.out.println("");
-            System.out.println(i + "번째 잡은 후");
-            func.printMatrix(R+2, C+2, matrix);
+//            System.out.println("");
+//            System.out.println(i + "번째 잡은 후");
+//            func.printMatrix(R+2, C+2, matrix);
 
 
             //상어 이동
@@ -135,17 +134,13 @@ public class _17143 { //낚시왕 문제
 
                                 //짝수였을 때
                             if(((shark.getSpeed()-(C-shark.getCol()))/(C-1))%2 == 0){//반대
-//                                c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
                                 c = C - ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
-//                                shark.setDir(4);
                                 shark.setDir(4);
 
 
                             }else{  //홀수였을 때
-//                                c = C - ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
                                 c = 1+ ((shark.getSpeed()-(C-shark.getCol()))%(C-1));
 
-//                                shark.setDir(3);
                                 shark.setDir(3);
 
                             }
@@ -170,13 +165,7 @@ public class _17143 { //낚시왕 문제
                                 c = C- ((shark.getSpeed() - (shark.getCol()-1))%(C-1));
                                 shark.setDir(4);
                             }
-//                            c = 1 + ((shark.getSpeed() - (shark.getCol()-1))%(C+1));
-//
-//                            if((((shark.getSpeed()-(shark.getCol()-1))/(C+1))%2) == 0){ //짝수면 반대 방향
-//                                shark.setDir(3);
-//                            }else{
-//                                shark.setDir(4);
-//                            }
+
                         }
                         else {
                             c = 1 + (shark.getSpeed() - (shark.getCol()-1));
@@ -190,13 +179,15 @@ public class _17143 { //낚시왕 문제
 
                 //움직였는데 이미 상어가 있다? Z비교 후 큰걸로 대체
                 if(matrix2[r][c] != null){
+                    if(j!=sharkList.size()-1 ) { //마지막 List요소일 때는 j-1해줄 필요 없음
+                        j = j - 1;
+                    }
                     if(matrix2[r][c].getZ() < shark.getZ()){ //현재 상어의 크기가 클 때
-                        sharkList.remove(matrix[r][c]); //list에서 상어삭제
+                        sharkList.remove(matrix2[r][c]); //list에서 상어삭제
                         matrix2[r][c] = shark; //변경
                     }else{ //있는 상어가 더 클 때
                         sharkList.remove(shark);
                     }
-                    j = j -1;
 
                 }
                 else{
@@ -204,10 +195,10 @@ public class _17143 { //낚시왕 문제
                 }
 
             }//상어 변경 모두 완료
-
-            System.out.println("");
-            System.out.println(i + "번째 이동 후 matrix2");
-            func.printMatrix(R+2, C+2, matrix2);
+//
+//            System.out.println("");
+//            System.out.println(i + "번째 이동 후 matrix2");
+//            func.printMatrix(R+2, C+2, matrix2);
 
 
             for(int j = 1; j <= R; j++){ //배열 깊은 복사
@@ -217,9 +208,9 @@ public class _17143 { //낚시왕 문제
                 }
             }
 
-            System.out.println("");
-            System.out.println(i + "번째 이동 후 matrix1 위에하고 같아야함");
-            func.printMatrix(R+2, C+2, matrix);
+//            System.out.println("");
+//            System.out.println(i + "번째 이동 후 matrix1 위에하고 같아야함");
+//            func.printMatrix(R+2, C+2, matrix);
         }
 
         System.out.println(cnt);
