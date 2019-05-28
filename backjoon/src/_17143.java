@@ -70,19 +70,20 @@ public class _17143 { //낚시왕 문제
                 int s = shark.getSpeed();
                 int d = shark.getDir();
                 int z = shark.getZ();
-
-                if(shark.getCol() == C && shark.getDir() == 3){ //현재 맨 오른쪽인데 방향이 오른쪽일 때
-                    shark.setDir(4);
-                }
-                if(shark.getCol() == 1 && shark.getDir() == 4){
-                    shark.setDir(3);
-                }
-                if(shark.getRow() == 1 && shark.getDir() == 1){
-                    shark.setDir(2);
-                }
-                if(shark.getRow() == R && shark.getDir() == 2){
-                    shark.setDir(1);
-                }
+                
+                // 이거 주석처리해도 잘 돌아감
+//                if(shark.getCol() == C && shark.getDir() == 3){ //현재 맨 오른쪽인데 방향이 오른쪽일 때
+//                    shark.setDir(4);
+//                }
+//                if(shark.getCol() == 1 && shark.getDir() == 4){
+//                    shark.setDir(3);
+//                }
+//                if(shark.getRow() == 1 && shark.getDir() == 1){
+//                    shark.setDir(2);
+//                }
+//                if(shark.getRow() == R && shark.getDir() == 2){
+//                    shark.setDir(1);
+//                }
 
                 if(shark.getDir()==1){ //위 //1,2는 row만 변경
                     r = shark.getRow() - shark.getSpeed();
