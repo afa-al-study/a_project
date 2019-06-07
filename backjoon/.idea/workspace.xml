@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c14cdfbd-3dce-4dd2-8299-5dbd2a7b36a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_11399.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11399.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,13 +72,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="38522" />
+          <entry key="java" value="38850" />
           <entry key="txt" value="232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="38522" />
+          <entry key="JAVA" value="38850" />
           <entry key="PLAIN_TEXT" value="232" />
         </counts>
       </usages-collector>
@@ -113,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_11399.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="144">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -251,7 +251,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ceoah/Desktop/backjunAlgorithm/backjoon/src/_1149.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559873913692" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559882481694" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../github_fork_artoo" />
   </component>
   <component name="RunDashboard">
@@ -344,7 +344,7 @@
       <workItem from="1556864224168" duration="5853000" />
       <workItem from="1558077552471" duration="59042000" />
       <workItem from="1559025271124" duration="4241000" />
-      <workItem from="1559626419499" duration="2881000" />
+      <workItem from="1559626419499" duration="4273000" />
     </task>
     <task id="LOCAL-00001" summary="visit이 없었을 시&#10;0부터 시작하지 않으면 맞음&#10;visit으로 인해 한 숫자당 꼭 3의 제곱으로 나오지 않을 수가 있음.&#10;이 부분 다시 생각해야함">
       <created>1554720977998</created>
@@ -364,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166329000" />
+    <option name="totallyTimeSpent" value="167721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,8 +388,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.21985815" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6346705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.21985815" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.63404256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -687,6 +687,12 @@
           <properties />
           <option name="timeStamp" value="169" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_11399.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -694,9 +700,7 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="matrix2[r][c]" language="JAVA" />
-        <watch expression="sharkList.get(j)" language="JAVA" />
-        <watch expression="sharkList" language="JAVA" />
+        <watch expression="p_times" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -925,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_11399.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="144">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
