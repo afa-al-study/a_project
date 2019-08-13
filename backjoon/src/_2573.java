@@ -6,23 +6,14 @@ public class _2573 {
     static int[][] matrix;
     static int[][] prev;
     static boolean[][] visit;
-//    static int div_num = 0; // 나눠진 횟수
-
-    static int year= 0;
-    static int row = 0;
-    static int col = 0;
-    static int first_row = 0;
-    static int first_col = 0;
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-//        int row = sc.nextInt();
-//        int col = sc.nextInt();
-        row = sc.nextInt();
-        col = sc.nextInt();
+        int row = sc.nextInt();
+        int col = sc.nextInt();
         int div_num = 0; // 나눠진 횟수
-//        int year = 0; // 몇 년 후,
+        int year = 0; // 몇 년 후,
 
         matrix = new int[row][col]; //입력 받은 2차원배열
         prev = new int[row][col]; // -1을 했을 때 0이 될 경우를 대비하여 확인을 위해 만든 2차원배열
@@ -45,11 +36,11 @@ public class _2573 {
                 visit[i][0] = true;
                 visit[i][col-1] = true;
         }
-        func.printMatrix2(row, col, visit);
+//        func.printMatrix2(row, col, visit);
 
 
-
-        while(div_num < 2){
+        int check = -1;
+        while(div_num < 2 && check != 0){
 //            Loop1 : for(int i = 0; i < row; i++){ //첫 번째 숫자
 //                for(int j = 0; j < col; j++){
 //                    if(matrix[i][j] != 0){
@@ -72,16 +63,21 @@ public class _2573 {
                 for(int j = 0; j < col; j++){
                     if(!visit[i][j] && matrix[i][j] != 0){
                         div_num++;
-                        System.out.println("false찾을때 마다 i = " + i + ", j = " + j);
+//                        System.out.println("false찾을때 마다 i = " + i + ", j = " + j);
                         visit[i][j] = true;
                         func.dfs(i, j);
                     }
                 }
             }
 
+            check = 0;
+            for(int i = 0; i < row; i ++)
+                for(int j = 0; j < col; j ++)
+                    if(matrix[i][j]!= 0) check++;
+
             year++;
 
-            System.out.println("divide = " + div_num);
+//            System.out.println("divide = " + div_num);
 
 
         }
@@ -109,58 +105,52 @@ public class _2573 {
         }
     }
     public void dfs(int i, int j){
-        //이차행렬 지워야함
-        System.out.println();
-        System.out.println("dfs함수 : i = " + i + ", j = " + j);
-        System.out.println("year : " + year);
-        printMatrix(row, col, matrix);
-
         //동, 남, 서, 북 순으로
         if(matrix[i][j+1] != 0 && !visit[i][j+1]){ //동
             visit[i][j+1] = true; //자기자신 visit
             prev[i][j+1]=matrix[i][j+1];
 
             dfs(i, j+1);
-            System.out.println("dfs동 : i = " + i + ", j = " + j);
+//            System.out.println("dfs동 : i = " + i + ", j = " + j);
         }
         if(matrix[i+1][j] != 0 && !visit[i+1][j]){ //남
             visit[i+1][j] = true;
             prev[i+1][j] = matrix[i+1][j];
 
             dfs(i+1, j);
-            System.out.println("dfs남 : i = " + i + ", j = " + j);
+//            System.out.println("dfs남 : i = " + i + ", j = " + j);
         }
         if(matrix[i][j-1] != 0 && !visit[i][j-1]){ //서
             visit[i][j-1] = true;
             prev[i][j-1]=matrix[i][j-1];
 
             dfs(i, j-1);
-            System.out.println("dfs서 : i = " + i + ", j = " + j);
+//            System.out.println("dfs서 : i = " + i + ", j = " + j);
         }
         if(matrix[i-1][j] != 0 && !visit[i-1][j]){ //북
             visit[i-1][j] = true;
             prev[i-1][j]=matrix[i-1][j];
 
             dfs(i-1, j);
-            System.out.println("dfs북 : i = " + i + ", j = " + j);
+//            System.out.println("dfs북 : i = " + i + ", j = " + j);
         }
 
-        System.out.println("돌아왔을때dfs함수 : i = " + i + ", j = " + j);
+//        System.out.println("돌아왔을때dfs함수 : i = " + i + ", j = " + j);
         //동, 남, 서, 북의 0의 개수대로
         if (matrix[i][j + 1] == 0 && matrix[i][j] > 0 && prev[i][j + 1] == 0) {
-            System.out.println("prev 동 : " + prev[i][j + 1]);
+//            System.out.println("prev 동 : " + prev[i][j + 1]);
             matrix[i][j]--;
         }
         if (matrix[i + 1][j] == 0 && matrix[i][j] > 0 && prev[i + 1][j] == 0) {
-            System.out.println("prev 남 : " + prev[i + 1][j]);
+//            System.out.println("prev 남 : " + prev[i + 1][j]);
             matrix[i][j]--;
         }
         if (matrix[i][j - 1] == 0 && matrix[i][j] > 0 && prev[i][j - 1] == 0) {
-            System.out.println("prev 서 : " + prev[i][j - 1]);
+//            System.out.println("prev 서 : " + prev[i][j - 1]);
             matrix[i][j]--;
         }
         if (matrix[i - 1][j] == 0 && matrix[i][j] > 0 && prev[i - 1][j] == 0) {
-            System.out.println("prev 북 : " + prev[i - 1][j]);
+//            System.out.println("prev 북 : " + prev[i - 1][j]);
             matrix[i][j]--;
         }
 
